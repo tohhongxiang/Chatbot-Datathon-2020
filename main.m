@@ -2,6 +2,8 @@ terra/chat
 terra/chat/app
 
 include ./topics/button.m
+include ./topics/dateSelect.m
+include ./topics/personalInfo.m
 include ./topics/workingExperience.m
 
 idk: I don't understand the question.
