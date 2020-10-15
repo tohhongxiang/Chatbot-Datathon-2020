@@ -2,6 +2,7 @@ terra/chat
 terra/chat/app
 
 include ./topics/button.m
+include ./topics/introduction.m
 include ./topics/dateSelect.m
 include ./topics/personalInfo.m
 include ./topics/workingExperience.m
