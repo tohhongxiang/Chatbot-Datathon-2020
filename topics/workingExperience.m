@@ -4,7 +4,6 @@
 \
 \ Working Experience Questions
 \
-mem: counts
 
 @: replies
 replies: Yes No
@@ -16,24 +15,33 @@ init: Type "start" to begin
 
 Q: start
 A: Do you have authorized working rights in Singapore? ${ "Yes" AnswerButton } ${ "No" AnswerButton }
+K: workingExperience
 --
+
+room: workingExperience
 
 Q: $replies.@replies
 A: $replies :No same? % Thanks bye
 A: Please choose your current working rights ${ "Citizen / PR" AnswerButton } ${ "EP / SPass" AnswerButton } ${ "Others" AnswerButton }
-K: +counts %
 --
 
 Q: $workingRight.@workingRights
 A: $workingRight :Others same? % Please tell me your working type
 A: You should be fine working here
-K: +counts %
+K: $back experience
 --
 
 Q: $_
-A: counts 1 >= % Your working right is $_
-A: I do not understand what you said
+A: Your working right is $_
+K: $back experience
 --
+
+end-room
+
+Q: $_
+A: Please type start to begin collecting working experience information
+--
+
 
 
 
