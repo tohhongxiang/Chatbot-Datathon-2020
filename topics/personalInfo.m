@@ -9,7 +9,6 @@
 salaryRanges: $5000-$7000 $7000-$10000 $10000-$12000
 
 assoc: salaries
-mem: rank
 
 {{
     "$5000-$7000"   "A"
@@ -20,21 +19,19 @@ mem: rank
 \ Previous question must give key: SalaryQuestion
 room: SalaryQuestion
 
-Q: _ \ Process prev answer
-A: What is your monthly salary expectation in SGD ${"$5000-$7000" AnswerButton} ${"$7000-$10000" AnswerButton} ${"$10000-$12000" AnswerButton}?
-K: $back StartdateQuestion
---
+\ Q: _ \ Process prev answer
+\ A: What is your monthly salary expectation in SGD ${"$5000-$7000" AnswerButton} ${"$7000-$10000" AnswerButton} ${"$10000-$12000" AnswerButton}?
+\ K: $back StartDateQuestion
+\ --
 end-room
 
 \ Previous question must give key: StartdateQuestion
-room: StartdateQuestion
+room: StartDateQuestion
 
 Q: $x.@salaryRanges
-A: $x salaries rank! % If offered the position what is your availability to start ${ dateSelector }?
-L: ${ rank }    \ Individual logging for now
+A: $x salaries sRank! % If offered the position what is your availability to start ${ dateSelector }?
+L: ${ cName } ${ cEmail} ${ score fail sRank wType rankCalc } ${ score } ${ wType } ${ date }
 K: $back End    \ Implement next key
 
 --
 end-room
-
-
