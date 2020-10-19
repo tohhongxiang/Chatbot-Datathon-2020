@@ -55,10 +55,6 @@ assoc: expWeight3 yearWeight3 yearFail3 yearWeight4 yearFail4
 score java int 1 = IF "Java" expWeight3 + THEN python int 1 = IF "Python" expWeight3 + THEN net int 1 = IF "NET" expWeight3 + THEN csharp int 1 = IF "cSharp" expWeight3 + THEN
 ;
 
-: t2 ( -- "s" )
-"What is your experience in programming? <br> "
-;
-
 : multi2 ( -- "s" )
 q{
     <style>
@@ -113,7 +109,7 @@ q{
 ;
 
 : t5 ( -- "s" )
-"Criteria 5"
+"What is your monthly salary expectation in SGD? <br>"
 ;
 
 
@@ -141,9 +137,9 @@ end-room
 room: criteria4
 
 Q: $answerCrit4.@answerCrit4
-K: score $answerCrit4 yearWeight4 + score! fail $answerCrit4 yearFail4 + fail! DROP % $back personalInfo
+K: score $answerCrit4 yearWeight4 + score! fail $answerCrit4 yearFail4 + fail! DROP % $back StartDateQuestion
 \ Add contiuation to criteria 5 here
-A: ${ t5 }
+A: ${ t5 } ${ "$5000-$7000" AnswerButton } ${ "$7000-$10000" AnswerButton } ${ "$10000-$12000" AnswerButton }
 --
 
 end-room
@@ -158,5 +154,6 @@ end-room
 \ A: ${ t2 } ${ multi2 } <--- Add this to previous room answer before transitioning
 \ K: $back criteria2
 \ --
+
 
 
