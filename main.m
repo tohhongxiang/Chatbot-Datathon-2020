@@ -1,46 +1,48 @@
+\
+\ @author: ntubot043
+\ @date: 6 Oct 2020
+\
+\ A brief description of this program.
+\
+
+
+\ Main for Keppel Test
+
 terra/chat
 terra/chat/app
 
-include ./topics/button.m
-include ./topics/introduction.m
-include ./topics/dateSelect.m
-include ./topics/personalInfo.m
-include ./topics/workingExperience.m
-include ./topics/experiences.m
+include ./topics/Entry.m
 
-idk: I don't understand the question.
+idk: I'm not sure what you mean. Please answer the question
 
 : test 
   \ NOTE: Add your questions to test here.
-  "Yes" answer . cr
-  "No" answer . cr
-  "Citizen / PR" answer . cr
-  "Others" answer . cr
-  "asdf" answer . cr
+  "1 1 1 1" answer . cr
+  "None" answer . cr
+  "k" answer . cr
 ;
 
 : publish 
+  \ What your bot says at first. 
+  init: "Hi there, thank you for your interest in the RPA Technical architect position here at Keppel. For your information, I will be asking you some questions about your experience and details about yourself. This would take approximately 15 minutes. Are you ready?"
+  
   \ The background image. Should be tileable/repeatable.
-  background: https://i.redd.it/ptop9lupzcq31.jpg
+  background: https://live.staticflickr.com/4135/4915115384_ca7b1df603_b.jpg
   
   \ Image of the avatar to use. 
-  avatar: https://pm1.narvii.com/7032/4f274d2256b6dad98d82abb076be6b813a942e05r1-1079-1296v2_hq.jpg
+  avatar: https://images.pexels.com/photos/3394658/pexels-photo-3394658.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
 
   \ These will be visible when you share the link to your bot. 
-  title: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+  title: Chatbot for Keppel
   \ IMPORTANT!! Remember to insert your username.
-  url: https://app.smojo.org/ntubot044/bot
-  description: ไม่ทราบว่าคุณเล่นอะไรอ่ะครับ น้องผมเป็นโรคหัวใจมาเปิดดูกระทู้นี้ตอนนี้ ส่ง ร.พ. ไปแล้วครับ พ่อแม่รีบหามไปเมื่อครู่ใหญ่ๆ คือตอนที่เค้าล้มจากเก้าอี้พวกผมตกใจ พอส่ง ร.พ.ไป มาเห็นหน้าคอมที่ก่อนหน้านี้น้องเล่นอยู่ดีๆ ในหน้าคอมเปิด เกมที่คุณเอามาลงค้างไว้ แล้วก็หน้ากระทุ้ของคุณอยากบอกว่าจะเล่นอะไรคิดถึงคนอื่นด้วยนะครับไม่ใช่จะเอาแต่สนุก ตอนนี้น้องผมเพิ่งไปร.พ. กะพ่อและแม่ ไม่เป็นอันต้องทำงานพอดีทำอะไรคิดหน้าคิดหลังก่อนนะ และจำไว้เป็นอุทาหรณ์เลยถ้าร้องผมเป็นอะไรไปผมไม่ยอมแน่ๆ ผมแจ้งสาเหตุที่น้องผมโรคหัวใจกำเริบให้กับ ร.พ.ไปแล้ว เค้าก็บอกว่าเคยมีพวกที่แกล้งเอารูปผีที่จะโผล่ๆมาใน window เคยผู้ป่วยโรคหัวใจมีคนเข้า ร.พ.เพราะเคสนี้มา 3-4 คนแล้ว
-  thumbnail: https://pm1.narvii.com/7032/4f274d2256b6dad98d82abb076be6b813a942e05r1-1079-1296v2_hq.jpg
+  url: https://app.smojo.org/ntubot043/keppel
+  description: KeppelTest
+  thumbnail: https://images.pexels.com/photos/3394658/pexels-photo-3394658.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
   
   \ name of your bot.
   \ The URL depends on this.
-  publish: bot  
+  publish: keppel
 ;
-
-
-
-
 
 
 
