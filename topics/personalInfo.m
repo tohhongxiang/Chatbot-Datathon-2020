@@ -16,22 +16,31 @@ assoc: salaries
     "$10000-$12000" "C"
 }} +salaries
 
-\ Previous question must give key: SalaryQuestion
-room: SalaryQuestion
-
-\ Q: _ \ Process prev answer
-\ A: What is your monthly salary expectation in SGD ${"$5000-$7000" AnswerButton} ${"$7000-$10000" AnswerButton} ${"$10000-$12000" AnswerButton}?
-\ K: $back StartDateQuestion
-\ --
-end-room
 
 \ Previous question must give key: StartdateQuestion
 room: StartDateQuestion
 
 Q: $x.@salaryRanges
-A: $x salaries sRank! % If offered the position what is your availability to start ${ dateSelector }?
+A: $x salaries sRank! % If offered the position what is your availability to start? ${ dateSelector }
+K: $back End
+
+--
+end-room
+
+room: End
+
+Q: $x.@date
+A: Thank you! This brings us to the end. We will be in touch if you are shortlisted for the next step.
 L: ${ cName } ${ cEmail} ${ score fail sRank wType rankCalc } ${ score } ${ wType } ${ date }
-K: $back End    \ Implement next key
+K: $back Done
+
+--
+end-room
+
+room: Done
+
+Q: $_
+A: Thank you! We are done with your application. Please reload the page to start a new submission.
 
 --
 end-room
