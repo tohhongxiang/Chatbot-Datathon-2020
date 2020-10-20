@@ -24,7 +24,7 @@ idk: I'm not sure what you mean. Please answer the question
 
 : publish 
   \ What your bot says at first. 
-  init: "Hi there, thank you for your interest in the RPA Technical architect position here at Keppel. For your information, I will be asking you some questions about your experience and details about yourself. This would take approximately 15 minutes. Are you ready?"
+  init: Hi there, thank you for your interest in the RPA Technical architect position here at Keppel. <br><br> For your information, I will be asking you some questions about your experience and details about yourself. This would take approximately 15 minutes. Are you ready?
   
   \ The background image. Should be tileable/repeatable.
   background: https://live.staticflickr.com/4135/4915115384_ca7b1df603_b.jpg
