@@ -12,7 +12,7 @@
 room: name
 
 Q: $yourname
-A: Thank you $yourname. Could you also provide us with your email address?
+A: Thank you $yourname Could you also provide us with your email address?
 K: $yourname cName! % $back email \ Key to "email" room
 --
 
