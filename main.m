@@ -16,10 +16,18 @@ include ./topics/Entry.m
 idk: I'm not sure what you mean. Please answer the question
 
 : test 
-  \ NOTE: Add your questions to test here.
-  "1 1 1 1" answer . cr
-  "None" answer . cr
-  "k" answer . cr
+    \ A* Condition
+    "Yes" answer . cr
+    "John" answer . cr
+    "John@gmail.com" answer . cr
+    "No" answer . cr
+    "Yes" answer . cr
+    "Citizen / PR" answer . cr
+    "1 1 1 1" answer . cr
+    "Over 8 years" answer . cr
+    "Over 6 years" answer . cr
+    "$7000-$10000" answer . cr
+    "2020-10-21" answer . cr
 ;
 
 : publish 
