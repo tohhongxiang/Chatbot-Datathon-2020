@@ -11,7 +11,7 @@ replies: :pos :neg
 fail 0 > score 50 < sRank "C" same? or or -> "Fail" |
 score 69 < -> "C" |
 score 84 < -> "B" |
-sRank "B" same? sRank "A" same? or score 85 > wType "Citizen / PR" same? and and -> "A*" |
+score 85 > wType "CITIZEN_/_PR" same? and -> "A*" |
 otherwise "A" |.
 ;
 

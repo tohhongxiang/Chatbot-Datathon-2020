@@ -76,8 +76,8 @@ A: Please choose your current working rights ${ "Citizen / PR" AnswerButton } ${
 
 Q: $workingRight.@workingRights
 A: $workingRight :Others same? % Please tell me your working type
-A: You should be fine working here. <br> ${ t2 } ${ multi2 }
-K: $workingRight wType! $back criteria2
+A: $workingRight wType! % You should be fine working here. <br> ${ t2 } ${ multi2 }
+K: $back criteria2
 --
 
 Q: $_

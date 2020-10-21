@@ -30,7 +30,7 @@ end-room
 room: End
 
 Q: $x.@date
-A: Thank you! This brings us to the end. We will be in touch if you are shortlisted for the next step.
+A: $x date! % Thank you! This brings us to the end. We will be in touch if you are shortlisted for the next step.
 L: ${ cName } ${ cEmail} ${ score fail sRank wType rankCalc } ${ score } ${ wType } ${ date }
 K: $back Done
 
